@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 var concat = require('gulp-concat');
 var webserver = require('gulp-webserver');
+var uglify = require('gulp-uglify');
 var del = require('del');
 var sourcemaps = require('gulp-sourcemaps'); // It is used for concatenation scss files otherwise it does not work
 
@@ -18,6 +19,7 @@ gulp.task('clean', function() {
 gulp.task('scripts', function(){
   return gulp.src('assets/scripts/*.js')
     .pipe(concat('script.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('js/'));
 });
 
