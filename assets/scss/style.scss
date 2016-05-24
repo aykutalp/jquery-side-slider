@@ -1,0 +1,48 @@
+// Style.scss
+
+$greybox: #7c7c7c;
+$squareSize: 250px;
+
+body {
+  & p {
+    text-align: justify;
+  }
+}
+
+#slider {
+  width: $squareSize;
+  height: $squareSize;
+  overflow: hidden;
+  float: right;
+  margin: 5px;
+
+  & ul.slides {
+    display: block;
+    width: 5000px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  & li.slide {
+    float: left;
+    width: $squareSize;
+    height: $squareSize;
+  }
+
+  & li img {
+    width: $squareSize;
+  }
+
+  & li img:hover {
+    cursor: pointer;
+  }
+}
+
+.greybox {
+  width: 100%;
+  min-width: 200px;
+  height: 280px;
+  background-color: lighten($greybox, 40%);
+}
